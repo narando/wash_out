@@ -124,7 +124,7 @@ module WashOut
         return result_spec
       }
 
-      render :template => "wash_with_soap/#{soap_config.wsdl_style}/response",
+      render :template => "wash_with_soap/#{soap_config.wsdl_style}/#{soap_config.render_tpl}",
              :layout => false,
              :locals => { :result => inject.call(result, @action_spec[:out]) },
              :content_type => 'text/xml'
